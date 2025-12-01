@@ -12,7 +12,6 @@ class TennisGame:
             self.m_score2 +=+ 1
 
     def get_score(self):
-        temp_score = 0
         if self.m_score1 == self.m_score2:
             return self.gamestate1()
         elif self.m_score1 >= 4 or self.m_score2 >= 4:
