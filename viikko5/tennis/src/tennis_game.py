@@ -9,7 +9,7 @@ class TennisGame:
         if player_name == "player1":
             self.m_score1 += 1
         else:
-            self.m_score2 +=+ 1
+            self.m_score2 += 1
 
     def get_score(self):
         if self.m_score1 == self.m_score2:
