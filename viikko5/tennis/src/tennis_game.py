@@ -13,13 +13,13 @@ class TennisGame:
 
     def get_score(self):
         if self.m_score1 == self.m_score2:
-            return self.gamestate1()
+            return self.get_tied_score()
         elif self.m_score1 >= 4 or self.m_score2 >= 4:
-            return self.gamestate2()
+            return self.get_end_game_score()
         else:
-            return self.gamestate3()
+            return self.get_regular_score()
 
-    def gamestate1(self):
+    def get_tied_score(self):
         if self.m_score1 == 0:
             return "Love-All"
         elif self.m_score1 == 1:
@@ -29,7 +29,7 @@ class TennisGame:
         else:
             return "Deuce"
 
-    def gamestate2(self):
+    def get_end_game_score(self):
             minus_result = self.m_score1 - self. m_score2
             if minus_result == 1:
                 return "Advantage player1"
@@ -40,7 +40,7 @@ class TennisGame:
             else:
                 return "Win for player2"
 
-    def gamestate3(self):
+    def get_regular_score(self):
         score = ""
         for i in range(1, 3):
             if i == 1:
