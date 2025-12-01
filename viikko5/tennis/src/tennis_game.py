@@ -30,7 +30,7 @@ class TennisGame:
             return "Deuce"
 
     def gamestate2(self):
-            minus_result = self.m_score1 - self. m_score2
+            minus_result = self.m_score1 - self.m_score2
             if minus_result == 1:
                 return "Advantage player1"
             elif minus_result == -1:
